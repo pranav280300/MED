@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>MED ++</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!--Get your own code at fontawesome.com-->
+<style>
+table {
+  overflow-y:scroll;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;}
+
+  .wrapper {
+    text-align: center;
+}
+.wrapperdr {
+    text-align: right;
+}
+body,h1,h2,h3,h4,h5,pre{font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:3}
+</style>
+
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyAfCQKvVLhRFy2Vz-lA1iXzvZFKXlnfsWQ",
+  authDomain: "medplusplus-3c769.firebaseapp.com",
+  databaseURL: "https://medplusplus-3c769.firebaseio.com",
+  projectId: "medplusplus-3c769",
+  storageBucket: "",
+  messagingSenderId: "994516716009",
+  appId: "1:994516716009:web:e6e2ea0bc5b200b39ba378"
+};
+</script>
+
+<script type="text/javascript">
+
+var n;
+  function prin()
+  {
+
+
+    n=document.getElementById("number").value;
+    var tab=document.getElementById("prescription");
+
+    for(i=0;i<n;i++)
+    {
+      var tr=document.createElement("tr");
+      var td1=document.createElement("td");
+      var td2=document.createElement("td");
+      var td3=document.createElement("td");
+      var td4=document.createElement("td");
+
+      var inp1=document.createElement("input");
+      inp1.setAttribute("type","text");
+      inp1.setAttribute("id","input1"+i);
+      var inp2=document.createElement("input");
+      inp2.setAttribute("type","checkbox");
+      inp2.setAttribute("value","Morning");
+      inp1.setAttribute("id","input2"+i);
+      var inp3=document.createElement("input");
+      inp3.setAttribute("type","checkbox");
+      inp3.setAttribute("value","Evening");
+      inp1.setAttribute("id","input3"+i);
+      var inp4=document.createElement("input");
+      inp4.setAttribute("type","checkbox");
+      inp4.setAttribute("value","Night");
+      inp1.setAttribute("id","input4"+i);
+
+      td1.appendChild(inp1);
+      tr.appendChild(td1);
+      td2.appendChild(inp2);
+      tr.appendChild(td2);
+      td3.appendChild(inp3);
+      tr.appendChild(td3);
+      td4.appendChild(inp4);
+      tr.appendChild(td4);
+
+      tab.appendChild(tr);
+
+
+    }
+
+  }
+  function send()
+  {
+    var name=document.getElementById("name").value;
+    var Message=document.getElementById("prescription").value;
+    var phno=document.getElementById("phno").value;
+    //for(i=0;i<n;i++)
+    //{
+    //  var med=document.getElementById("n"+(1).toString()).value;
+    //  alert(med);
+    //  var mor=document.getElementById("input2"+i).checked;
+    //  alert(mor);
+    //  var even=document.getElementById("input3"+i).checked;
+    //  var nig=document.getElementById("input4"+i).checked;
+    //  Message=Message+"  "+mor+"  "+even+"  "+nig+"  ";
+    //}
+
+    var z=firebase.database().ref("medicalcenter/LOGS").push()
+
+    var key=z.key
+    z.set({
+      name:name,
+      drname:"Dr Rajesh",
+      message: Message,
+      phno:phno,
+      key: key
+    });
+
+  }
+
+function main()
+{
+  firebase.initializeApp(firebaseConfig);
+
+}
+function lol()
+{
+  alert("n"+(1).toString());
+}
+
+
+</script>>
+
+
+
+<body onload="main();">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h2 class="w3-padding-64"><strong>MED ++ <i class='fas fa-clinic-medical' style='font-size:36px'></i></strong><br></b></h2>
+
+
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class='fas fa-home' style='font-size:25px'></i>  Home</a>
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class='fas fa-question' style='font-size:30px'></i> Know your Doctor</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class='fas fa-archive' style='font-size:25px'></i>  prescription</a>
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class='fas fa-address-book' style='font-size:25px'></i>  Contact Us</a>
+    <a href="logs.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class='fas fa-clipboard-list' style='font-size:30px'></i>  Logs</a>
+
+    <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><b><h4><i class='fas fa-address-book' style='font-size:25px'></i> Contact</h4></b></a> -->
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>MED ++</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b><i class='fas fa-archive' style='font-size:48px'></i>  prescription</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+      <button type="submit" class="btn btn-success mb-2" onclick="send();">send</button>
+      <table>
+        <tr>
+      <td> Patient Name</td> <td> <input type="text" id="name"></td>
+    </tr>
+    <tr>
+      <td> Phone Number</td><td>  <input type="text" id="phno"></td>
+    </tr>
+    <tr>
+      <td> Prescription </td><td><input type="text" id="prescription"></td>
+    </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+
+</body>
+</html>

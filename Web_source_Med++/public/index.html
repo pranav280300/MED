@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>MED ++</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!--Get your own code at fontawesome.com-->
+<style>
+
+
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:3}
+</style>
+<script type="text/javascript" src="qrcode.js"></script>
+<script type="text/javascript" src="html5-qrcode.js"></script>
+<script>
+function updateQRcode(x)
+{
+
+
+  var element=document.getElementById("qrcode");
+  var bodyelement=document.body;
+
+  if(element.lastChild)
+  {
+    element.replaceChild(showQRCode(x),element.lastChild);
+
+
+
+  }
+  else {
+    element.replaceChild(showQRCode(x));
+
+  }
+
+}
+
+
+</script>
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+
+  <div class="w3-container">
+    <h2 class="w3-padding-64"><strong>MED ++ <i class='fas fa-clinic-medical' style='font-size:36px'></i></strong><br></b></h2>
+
+
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><i class='fas fa-home' style='font-size:25px'></i>  Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white", target="_blank"> <i class='fas fa-question' style='font-size:30px'></i> Know your Doctor</a>
+    <a href="preci.html" class="w3-bar-item w3-button w3-hover-white" target="_blank"><i class='fas fa-archive' style='font-size:25px'></i>  prescription</a>
+    <a href="#designers"class="w3-bar-item w3-button w3-hover-white" target="_blank"><i class='fas fa-clipboard-list' style='font-size:30px'></i>  Contact Us</a>
+
+    <!-- /<a href="#contact" class="w3-bar-item w3-button w3-hover-white"><b><h4><i class='fas fa-address-book' style='font-size:25px'></i> Contact</h4></b></a> -->
+    <a href="logs.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><i class='fas fa-clipboard-list' style='font-size:30px'></i>  Logs</a>
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large"  style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>MED ++</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Appointments</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+     <!--  <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs"> -->
+      For appointments click here.
+      <div class="row">
+  <div class="col-sm-9">
+
+    <div class="card">
+      <div class="card-body">
+        <a href="https://docprime.com/dr-shyam-kumar-dhingra-pediatrician-in-gopal-pura-mode-jaipur-dpp"><h5 class="card-title">Dr. Shyam Kumar Dhingra</h5></a>
+        <p class="card-text">Pediatrician</p>
+        <button class="btn btn-danger" onclick="updateQRcode('Dr. Shyam Kumar Dhingra&120')">Get Appointment</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="card">
+      <div class="card-body">
+        <a href="https://docprime.com/dr-sanjeev-kansotiya-orthopedist-in-tonk-phatak-jaipur-dpp"><h5 class="card-title">Dr. Sanjeev Kansotiya</h5></a>
+        <p class="card-text">Orthopedist</p>
+        <button class="btn btn-danger" onclick="updateQRcode('Dr. Sanjeev Kansotiya&140')">Get Appointment</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-9">
+    <div class="card">
+      <div class="card-body">
+        <a href="https://docprime.com/dr-siloni-thaper-dentist-in-lalkothi-jaipur-dpp"><h5 class="card-title">Dr. Siloni Thaper</h5></a>
+        <p class="card-text">Dentist</p>
+        <button class="btn btn-danger" onclick="updateQRcode('&160')">Get Appointment</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-9">
+    <div class="card">
+      <div class="card-body">
+        <a href="https://docprime.com/dr-mahendra-saini-dentist-in-ramnagar-jaipur-dpp"><h5 class="card-title">Dr. Mahendra Saini</h5></a>
+        <p class="card-text">Dentist</p>
+        <button class="btn btn-danger" onclick="updateQRcode('Dr. Mahendra Saini&180')">Get Appointment</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-9">
+    <div class="card">
+      <div class="card-body">
+        <a href="https://docprime.com/dr-manisha-saharan-pt-orthopedic-physiotherapist-physiotherapist-in-govindpuri-jaipur-dpp"><h5 class="card-title">Dr. Manisha Saharan (Pt)</h5></a>
+        <p class="card-text">Physiotherapist</p>
+        <button class="btn btn-danger" onclick="updateQRcode('Dr. Manisha Saharan (Pt)i&200')">Get Appointment</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    </div>
+
+    <div class="w3-third" >
+  <div class="w3-card w3-container" style="min-height:264px" id="qrcode">
+
+
+
+  </div>
+</div>
+</div>
+
+  <!--   <div class="w3-half">
+      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div> -->
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We are a digitised prescription startup that aims to give bleeding edge information to our users</p>
+    <p>
+      Our services include :
+      <ul>
+<li>Providing industry leading digitised prescription for doctor-side and patient-side reference and records</li>
+<li>Providing a verified listing of Doctors with their degrees, majors and ratings</li>
+<li>Generating appointment tokens so that you avoid long queues when you visit the doctor's clinic.</li>
+</ul>
+    </p>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Our packages are completely free to use for patients and doctors as our motto is to serve the community first and foremost and to inform the userbase to make informed decisions and provide accurate prescription records.<br>
+      We have a partner program for Pharmacy vendors -- It will help local vendors to get their businesses to a larger base<br>
+      <a href='https://www.twopoint.com/vendors/pharmacy-vendors/' target="_blank">Click Here</a> to know more about our Revenue sharing model for Vendors.<br>
+    A HEALTHY COMMUNITY IS THE KEY TO A PROGRESSIVE SOCIETY!</p>
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The best team in the world.</p>
+    <p>We have a dedicated team of designers serving your needs round the clock.
+    </p>
+    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-red">
+        <img src="image/jaideep.jpg" alt="Jaideep" style="width:100%">
+        <div class="w3-container">
+          <h3>Jaideep</h3>
+          <p class="w3-opacity">App Developer</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="image/pranav.jpg" alt="Pranav" style="width:100%">
+        <div class="w3-container">
+          <h3>Pranav</h3>
+          <p class="w3-opacity">Web Designer</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="image/kapil.jpg" alt="Kapil" style="width:100%">
+        <div class="w3-container">
+          <h3>Kapil</h3>
+          <p class="w3-opacity">Designer</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="image/sina.jpg" alt="Kshitij" style="width:100%">
+        <div class="w3-container">
+          <h3>Kshitij</h3>
+          <p class="w3-opacity">Back-end and Processes</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Do you have any queries or comments, we would love to hear from you --</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+</body>
+</html>
